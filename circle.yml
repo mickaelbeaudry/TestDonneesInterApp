@@ -1,4 +1,6 @@
 test:
   override:
+    - ls -l $ANDROID_HOME/build-tools
     - ./gradlew assembleRelease
-    - cp -r project-name/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r appa/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r appb/build/outputs $CIRCLE_ARTIFACTS
